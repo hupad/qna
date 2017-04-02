@@ -1,25 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby Version: 2.3.1
+- Rails Version: 5.0
+- Database: MySQL
 
-Things you may want to cover:
 
-* Ruby version
+# Setting up
 
-* System dependencies
+- Install MySQL with username/password: root/welcome. Or change the config/database.yml file to your current MySQL root password.
+- Run the following commands
+  * rake db:setup
+  * rake db:migrate
+  * rake db:seed
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# qna
+- Start your rails server.
