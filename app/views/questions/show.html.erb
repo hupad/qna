@@ -1,0 +1,16 @@
+<%= link_to "Questions", questions_path %>
+<h1>Question</h1>
+
+<p>
+	<%= @redcarpet.render(@question.title).html_safe %>
+</p>
+
+<h1>Answers</h1>
+<% @question.answers.each do |answer| %>
+	<%= raw coderay(answer.text) %>
+<% end %>
+
+<%= form_for @answer, url: create_answers_path do |f| %>
+	<%= f.text_area :text %>
+	<%= f.button "Submit", class: 'btn btn-primary btn-lg', data: {disable_with: "Submit...."}  %>
+<% end %>

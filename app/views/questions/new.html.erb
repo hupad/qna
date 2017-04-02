@@ -1,0 +1,7 @@
+<h1>New Question</h1>
+<%= form_for @question, url: {action: "create"} do |f| %>
+	<div class='form-group'>
+		<%= f.text_area :title %>
+		<%= f.submit "Submit", class: 'btn btn-primary btn-lg', data: {disable_with: "Submit..."} %>
+	</div>
+<% end %>
